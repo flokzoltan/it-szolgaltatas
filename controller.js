@@ -1,8 +1,12 @@
 /**
- * APP CONTROLLER (Optimalizált)
+ * APP CONTROLLER (Optimalizált & Javított)
  */
 document.addEventListener('DOMContentLoaded', () => {
-  AppController.init();
+  if (typeof AppModel !== 'undefined') {
+    AppController.init();
+  } else {
+    console.error('AppModel nem található! Ellenőrizd a model.js betöltését.');
+  }
 });
 
 const AppController = {
@@ -14,7 +18,7 @@ const AppController = {
   },
 
   bindEvents() {
-    // 1. Language Switcher - Delegálás
+    // 1. Language Switcher
     const langSwitch = document.querySelector('.lang-switch');
     if (langSwitch) {
       langSwitch.addEventListener('click', (e) => {
@@ -26,7 +30,7 @@ const AppController = {
       });
     }
 
-    // 2. FAQ Accordion - Delegálás
+    // 2. FAQ Accordion
     const faqContainer = document.querySelector('.faq');
     if (faqContainer) {
       faqContainer.addEventListener('click', (e) => {
@@ -34,7 +38,6 @@ const AppController = {
         if (!btn) return;
 
         const currentItem = btn.closest('.faq-item');
-        const currentPanel = currentItem.querySelector('.faq-a');
         const isOpen = currentItem.classList.contains('open');
 
         // Összes többi panel bezárása
@@ -48,29 +51,31 @@ const AppController = {
         if (isOpen) {
           this.closeFaqItem(currentItem);
         } else {
-          this.openFaqItem(currentItem, btn, currentPanel);
+          this.openFaqItem(currentItem, btn);
         }
       });
     }
   },
 
- openFaqItem(item, btn) {
-  item.classList.add('open');
-  btn.setAttribute('aria-expanded', 'true');
-},
+  openFaqItem(item, btn) {
+    item.classList.add('open');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  },
 
-closeFaqItem(item) {
-  item.classList.remove('open');
-  const btn = item.querySelector('.faq-q');
-  if (btn) btn.setAttribute('aria-expanded', 'false');
-},
+  closeFaqItem(item) {
+    item.classList.remove('open');
+    const btn = item.querySelector('.faq-q');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  },
 
   applyLanguage(lang) {
     AppModel.setLang(lang);
     const dict = AppModel.i18n[lang];
     const contact = AppModel.contactData[lang];
 
-    // DOM Csatolások gyorsítása egyetlen lépésben
+    if (!dict || !contact) return;
+
+    // DOM Csatolások frissítése
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
