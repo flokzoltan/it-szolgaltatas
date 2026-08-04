@@ -7,7 +7,7 @@ const AppModel = {
 
   contactData: {
     hu: {
-      name: 'Zoltán Flok',
+      name: 'Flok Zoltán',
       phoneText: '+421 911 733 581',
       phoneHref: 'tel:+421911733581',
       emailText: 'it_szolg@icloud.com',
