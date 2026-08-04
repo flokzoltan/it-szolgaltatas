@@ -54,19 +54,16 @@ const AppController = {
     }
   },
 
-  openFaqItem(item, btn, panel) {
-    item.classList.add('open');
-    panel.style.maxHeight = panel.scrollHeight + 'px';
-    btn.setAttribute('aria-expanded', 'true');
-  },
+ openFaqItem(item, btn) {
+  item.classList.add('open');
+  btn.setAttribute('aria-expanded', 'true');
+},
 
-  closeFaqItem(item) {
-    item.classList.remove('open');
-    const panel = item.querySelector('.faq-a');
-    const btn = item.querySelector('.faq-q');
-    if (panel) panel.style.maxHeight = null;
-    if (btn) btn.setAttribute('aria-expanded', 'false');
-  },
+closeFaqItem(item) {
+  item.classList.remove('open');
+  const btn = item.querySelector('.faq-q');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+},
 
   applyLanguage(lang) {
     AppModel.setLang(lang);
