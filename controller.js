@@ -100,11 +100,6 @@ closeFaqItem(item) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
     });
-
-    // FAQ magasságok újraszámolása nyelvváltáskor
-    document.querySelectorAll('.faq-item.open .faq-a').forEach(panel => {
-      panel.style.maxHeight = panel.scrollHeight + 'px';
-    });
   },
 
   initScrollObserver() {
@@ -115,8 +110,12 @@ closeFaqItem(item) {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { 
+      threshold: 0.01,
+      rootMargin: '0px 0px -50px 0px' 
+    });
 
-    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    const targets = document.querySelectorAll('[data-reveal]');
+    targets.forEach(el => observer.observe(el));
   }
 };
