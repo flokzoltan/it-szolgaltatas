@@ -570,12 +570,16 @@ section { padding: 76px 0; }
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.25s ease-out;
+  overflow: hidden;
 }
 
 .faq-a > p {
   overflow: hidden;
 }
 
+.faq-a > * {
+  min-height: 0;
+}
 /* CTA Band */
 .cta-band {
   background: linear-gradient(135deg, var(--rust) 0%, var(--rust-dark) 100%);
