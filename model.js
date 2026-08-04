@@ -8,17 +8,17 @@ const AppModel = {
   contactData: {
     hu: {
       name: 'Zoltán Flok',
-      phoneText: '+421 000 000 000',
-      phoneHref: 'tel:+421000000000',
-      emailText: 'email@example.com',
-      emailHref: 'mailto:email@example.com'
+      phoneText: '+421 911 733 581',
+      phoneHref: 'tel:+421911733581',
+      emailText: 'it_szolg@icloud.com',
+      emailHref: 'mailto:it_szolg@icloud.com'
     },
     sk: {
       name: 'Zoltán Flok',
-      phoneText: '+421 000 000 000',
-      phoneHref: 'tel:+421000000000',
-      emailText: 'email@example.com',
-      emailHref: 'mailto:email@example.com'
+      phoneText: '+421 911 733 581',
+      phoneHref: 'tel:+421911733581',
+      emailText: 'it_szolg@icloud.com',
+      emailHref: 'mailto:it_szolg@icloud.com'
     }
   },
 
