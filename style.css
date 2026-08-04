@@ -561,15 +561,20 @@ section { padding: 76px 0; }
 
 .faq-q .plus::before { width: 14px; height: 2px; }
 .faq-q .plus::after { width: 2px; height: 14px; transition: transform .2s ease; }
-.faq-item.open .plus::after { transform: translate(-50%, -50%) rotate(90deg) scale(0); }
 
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .25s ease;
+.faq-item.open .faq-a {
+  grid-template-rows: 1fr;
 }
 
-.faq-a p { padding: 0 4px 20px; color: var(--ink-soft); font-size: 15.5px; max-width: 64ch; }
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease-out;
+}
+
+.faq-a > p {
+  overflow: hidden;
+}
 
 /* CTA Band */
 .cta-band {
