@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Számítógépes segítség házhoz — Ipolyság és környéke</title>
+  <meta name="description" content="Gyors, érthető IT segítség Ipolyságon és környékén. Lassú gép, wifi gond, adatmentés, kamerarendszer — házhoz megyek.">
+  <meta name="theme-color" content="#1B2A41">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="hu_HU">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:title" content="Számítógépes segítség házhoz — Ipolyság és környéke">
+  <meta property="og:description" content="Gyors, érthető IT segítség Ipolyságon és környékén. Lassú gép, wifi gond, adatmentés, kamerarendszer — házhoz megyek.">
+  <meta property="og:site_name" content="Flok Zoltán — IT segítség">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Számítógépes segítség házhoz — Ipolyság és környéke">
+  <meta name="twitter:description" content="Gyors, érthető IT segítség Ipolyságon és környékén. Lassú gép, wifi gond, adatmentés, kamerarendszer — házhoz megyek.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#foglalas" class="skip-link" data-i18n="skip">Ugrás a kapcsolatra</a>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark">IT</span>
+        <span data-contact="name">Flok Zoltán</span>
+      </a>
+      <nav class="nav-links" aria-label="Fő navigáció">
+        <a href="#szolgaltatasok" data-i18n="nav.services">Szolgáltatások</a>
+        <a href="#arak" data-i18n="nav.pricing">Árak</a>
+        <a href="#miert-en" data-i18n="nav.why">Miért engem</a>
+        <a href="#gyik" data-i18n="nav.faq">Kérdések</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Nyelv / Jazyk">
+          <button type="button" class="lang-btn" data-lang="hu" aria-pressed="true">HU</button>
+          <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
+        </div>
+        <a class="nav-phone" href="tel:+421911733581" data-contact="phone-link" aria-label="Hívás">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+        <a class="nav-cta" href="#foglalas" data-i18n="nav.cta">Időpontot kérek</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-kicker">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="eyebrow" data-i18n="hero.kicker">Ipolyság (Šahy) és környéke · Házhoz megyek</span>
+          </div>
+          <h1 data-i18n-html="hero.title">Ha lassú a géped,<br>nem <em>találgatunk</em> —<br>megmérjük, mi a baj.</h1>
+          <p class="hero-sub" data-i18n="hero.sub">Számítógépes, hálózati és otthoni IT segítség érthető nyelven. Nincs szakzsargon, nincs felesleges alkatrészcsere — csak a probléma, a megoldás, és egy előre egyeztetett ár.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#foglalas" data-i18n="hero.ctaPrimary">Írj vagy hívj most</a>
+            <a class="btn btn-ghost" href="#szolgaltatasok" data-i18n="hero.ctaGhost">Nézd meg, miben segítek</a>
+          </div>
+          <div class="hero-trust">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" stroke="currentColor" stroke-width="2"/></svg> <span data-i18n="hero.trust1">14 nap garancia minden munkára</span></span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2"/></svg> <span data-i18n="hero.trust2">Kiszállás 1–2 napon belül</span></span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2"/></svg> <span data-i18n="hero.trust3">Helyi, vidéki árazás</span></span>
+          </div>
+        </div>
+
+        <div class="logcard" data-reveal>
+          <div class="logcard-head">
+            <span class="tag" data-i18n="hero.logTag">Szervíznapló</span>
+            <span class="id">#014</span>
+          </div>
+          <div class="logrow">
+            <span class="sym">✓</span>
+            <span class="txt" data-i18n-html="hero.log1"><b>Lassú indulás:</b> tele lemez volt az oka, nem a gép kora.</span>
+          </div>
+          <div class="logrow">
+            <span class="sym">✓</span>
+            <span class="txt" data-i18n-html="hero.log2"><b>Forró laptop:</b> hűtőborda kitisztítva, hőpaszta cserélve.</span>
+          </div>
+          <div class="logrow">
+            <span class="sym">✓</span>
+            <span class="txt" data-i18n-html="hero.log3"><b>Törölt fotók:</b> visszaállítva — időben leállt a gép használata.</span>
+          </div>
+          <div class="logrow">
+            <span class="sym">✓</span>
+            <span class="txt" data-i18n-html="hero.log4"><b>Akadozó wifi:</b> router áthelyezve, mérve, stabil lett.</span>
+          </div>
+          <div class="logcard-foot">
+            <span data-i18n="hero.logFoot1">Ipolyság körzet</span>
+            <span data-i18n="hero.logFoot2">Minden bejegyzés — valós eset</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM STRIP -->
+    <section class="problems">
+      <div class="wrap p-0">
+        <div class="problem-grid">
+          <div class="problem"><span class="num">01</span><p data-i18n="problem1">A gép percekig tölt, mire használható</p></div>
+          <div class="problem"><span class="num">02</span><p data-i18n="problem2">A wifi akadozik vagy nem ér el mindenhová</p></div>
+          <div class="problem"><span class="num">03</span><p data-i18n="problem3">Véletlenül töröltél valami fontosat</p></div>
+          <div class="problem"><span class="num">04</span><p data-i18n="problem4">Forró, hangos vagy magától kikapcsol a gép</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="szolgaltatasok">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="svc.eyebrow">Szolgáltatások</span>
+          <h2 data-i18n="svc.heading">Amiben segíteni tudok</h2>
+          <p data-i18n="svc.sub">Minden tételnél megtalálod, miről ismerheted fel, hogy épp ez a problémád — és mennyibe kerül a megoldás. Nincs meglepetés.</p>
+        </div>
+
+        <!-- Cat A -->
+        <div class="cat">
+          <div class="cat-head"><span class="letter">A</span><h3 data-i18n="cat.a">Internet és otthoni hálózat</h3></div>
+          <div class="svc-grid">
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc1.title">Saját filmnéző rendszer otthonra</h4>
+              <p class="desc" data-i18n="svc1.desc">Egy saját, könnyen kezelhető „házi Netflix”, amit TV-n, telefonon, laptopon is elérsz.</p>
+              <p class="symptom" data-i18n-html="svc1.symptom"><b>Erről ismerheted fel:</b> filmjeid szét vannak szórva több gépen, lemezen, és szeretnéd egy helyen, rendezetten nézni.</p>
+              <div class="svc-price" data-i18n="svc1.price">25–45 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc2.title">Közös tárhely a családnak</h4>
+              <p class="desc" data-i18n="svc2.desc">Otthoni „felhő”, ahonnan mindenki eléri a közös fényképeket, dokumentumokat — havidíj nélkül.</p>
+              <p class="symptom" data-i18n-html="svc2.symptom"><b>Erről ismerheted fel:</b> emailben küldözgetitek egymásnak a fájlokat, vagy USB-kulcson hordjátok gépről gépre.</p>
+              <div class="svc-price" data-i18n="svc2.price">15–35 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc3.title">Lassú vagy akadozó wifi javítása</h4>
+              <p class="desc" data-i18n="svc3.desc">Megmérem a jelerősséget a lakásban, és onnan mondom meg a valódi okot — nem találgatok.</p>
+              <p class="symptom" data-i18n-html="svc3.symptom"><b>Erről ismerheted fel:</b> az egyik szobában jó a net, a másikban alig tölt be valami.</p>
+              <div class="svc-price" data-i18n="svc3.price">12–25 €</div>
+            </div>
+            <div class="svc featured" data-reveal>
+              <span class="svc-badge" data-i18n="svc4.badge">IP kamera</span>
+              <h4 data-i18n="svc4.title">IP kamera és megfigyelőrendszer</h4>
+              <p class="desc" data-i18n="svc4.desc">Biztonságos beüzemelés, telefonos eléréssel — gyári jelszó és nyitott portok nélkül.</p>
+              <p class="symptom" data-i18n-html="svc4.symptom"><b>Erről ismerheted fel:</b> szeretnéd látni telefonról, mi történik otthon vagy a telken, amíg nem vagy ott.</p>
+              <div class="svc-price" data-i18n="svc4.price">25–45 € munkadíj</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat B -->
+        <div class="cat">
+          <div class="cat-head"><span class="letter">B</span><h3 data-i18n="cat.b">Lassú vagy meleg a géped?</h3></div>
+          <div class="svc-grid">
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc5.title">Miért lassú a géped? — Gyorsvizsgálat</h4>
+              <p class="desc" data-i18n="svc5.desc">Megmérem, mi okozza a lassulást, és őszintén megmondom, érdemes-e költeni rá.</p>
+              <p class="symptom" data-i18n-html="svc5.symptom"><b>Erről ismerheted fel:</b> bekapcsolás után percekig tart, mire használható lesz, vagy folyton pörög a kis kerék.</p>
+              <div class="svc-price" data-i18n="svc5.price">8–12 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc6.title">Gyorsítás új tárolóval</h4>
+              <p class="desc" data-i18n="svc6.desc">A rendszer és minden fájl megmarad, csak sokkal gyorsabb lesz — semmit nem kell újra beállítanod.</p>
+              <p class="symptom" data-i18n-html="svc6.symptom"><b>Erről ismerheted fel:</b> minden megnyitáshoz percekig tart, pedig régen nem volt ilyen lassú.</p>
+              <div class="svc-price" data-i18n="svc6.price">20–30 € munkadíj</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc7.title">Belső tisztítás, ha forró vagy hangos</h4>
+              <p class="desc" data-i18n="svc7.desc">Portalanítás, hőpaszta-csere, mérhető hőmérséklet-csökkenéssel.</p>
+              <p class="symptom" data-i18n-html="svc7.symptom"><b>Erről ismerheted fel:</b> a ventilátor hangosan pörög böngészés közben is, vagy a gép magától kikapcsol.</p>
+              <div class="svc-price" data-i18n="svc7.price">15–25 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc8.title">Billentyűzet és képernyő tisztítás</h4>
+              <p class="desc" data-i18n="svc8.desc">Gyors, alapos, kényelmesebb és higiénikusabb mindennapi használatért.</p>
+              <p class="symptom" data-i18n-html="svc8.symptom"><b>Erről ismerheted fel:</b> a billentyűzet ragad, morzsás, a képernyőn ujjnyomok látszanak.</p>
+              <div class="svc-price" data-i18n="svc8.price">8–12 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat C -->
+        <div class="cat">
+          <div class="cat-head"><span class="letter">C</span><h3 data-i18n="cat.c">Rendszer, biztonság, adatok</h3></div>
+          <div class="svc-grid">
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc9.title">Új rendszer vagy régi gép felújítása</h4>
+              <p class="desc" data-i18n="svc9.desc">Irodára, otthoni szerverre vagy játékra szabva — nem a gyári alapbeállítással.</p>
+              <p class="symptom" data-i18n-html="svc9.symptom"><b>Erről ismerheted fel:</b> most vettél egy gépet, vagy van egy régi, sarokba állított géped, amit kár lenne kidobni.</p>
+              <div class="svc-price" data-i18n="svc9.price">25–50 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc10.title">Vírusirtás</h4>
+              <p class="desc" data-i18n="svc10.desc">Több eszközzel, keresztezve átvizsgálva — nem egyetlen gyors átfutással.</p>
+              <p class="symptom" data-i18n-html="svc10.symptom"><b>Erről ismerheted fel:</b> furcsa reklámablakok ugranak fel, vagy a böngésződ kezdőlapja magától megváltozott.</p>
+              <div class="svc-price" data-i18n="svc10.price">15–25 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc11.title">Jelszavak és fiókok biztonsága</h4>
+              <p class="desc" data-i18n="svc11.desc">Jelszókezelő beállítása, extra védelem a legfontosabb fiókokra.</p>
+              <p class="symptom" data-i18n-html="svc11.symptom"><b>Erről ismerheted fel:</b> ugyanazt a jelszót használod több helyen, vagy nem emlékszel, mikor váltottál utoljára.</p>
+              <div class="svc-price" data-i18n="svc11.price">10–15 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc12.title">Törölt fájlok visszaszerzése</h4>
+              <p class="desc" data-i18n="svc12.desc">Minél előbb hívsz, annál nagyobb az esély — ez a szabály a végleg elveszett fájl felett dönt.</p>
+              <p class="symptom" data-i18n-html="svc12.symptom"><b>Erről ismerheted fel:</b> véletlenül töröltél egy mappát, vagy leformáztad a pendrive-ot mentés előtt.</p>
+              <div class="svc-price" data-i18n="svc12.price">15–35 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc13.title">Automatikus biztonsági mentés</h4>
+              <p class="desc" data-i18n="svc13.desc">Egyszer beállítjuk, utána magától fut — próbával, hogy tényleg működik-e.</p>
+              <p class="symptom" data-i18n-html="svc13.symptom"><b>Erről ismerheted fel:</b> ha most tönkremenne a géped, minden fontos fájlod odaveszne.</p>
+              <div class="svc-price" data-i18n="svc13.price">12–25 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat D -->
+        <div class="cat">
+          <div class="cat-head"><span class="letter">D</span><h3 data-i18n="cat.d">Egyéb, amiben még segíthetek</h3></div>
+          <div class="svc-grid">
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc14.title">Nyomtató beüzemelése</h4>
+              <p class="desc" data-i18n="svc14.desc">Sokszor nem a nyomtató hibás, csak egy elavult illesztőprogram.</p>
+              <p class="symptom" data-i18n-html="svc14.symptom"><b>Erről ismerheted fel:</b> az új nyomtató nem csatlakozik, vagy a régi hirtelen nem hajlandó nyomtatni.</p>
+              <div class="svc-price" data-i18n="svc14.price">8–15 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc15.title">E-mail beállítás és rendrakás</h4>
+              <p class="desc" data-i18n="svc15.desc">Fiókváltás, régi levelek átköltöztetése, spamszűrés.</p>
+              <p class="symptom" data-i18n-html="svc15.symptom"><b>Erről ismerheted fel:</b> annyi felesleges levél gyűlt össze, hogy nem találod a fontosakat.</p>
+              <div class="svc-price" data-i18n="svc15.price">10–20 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc16.title">Régi fényképek digitalizálása</h4>
+              <p class="desc" data-i18n="svc16.desc">Papírképek, CD-k, kártyák biztonságos átmentése, mielőtt tönkremennének.</p>
+              <p class="symptom" data-i18n-html="svc16.symptom"><b>Erről ismerheted fel:</b> van otthon egy doboz régi fotó vagy egy fióknyi CD, amit évek óta nem néztél meg.</p>
+              <div class="svc-price" data-i18n="svc16.price">20–40 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc17.title">Új gép beüzemelése, adatátköltöztetés</h4>
+              <p class="desc" data-i18n="svc17.desc">Fájlok, jelszavak, programok — minden átkerül a régiről, gond nélkül.</p>
+              <p class="symptom" data-i18n-html="svc17.symptom"><b>Erről ismerheted fel:</b> ott áll az új géped dobozban, de nem tudod, hol kezdd.</p>
+              <div class="svc-price" data-i18n="svc17.price">25–40 €</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat E -->
+        <div class="cat mb-0">
+          <div class="cat-head"><span class="letter">E</span><h3 data-i18n="cat.e">Távoli elérés és folyamatos támogatás</h3></div>
+          <div class="svc-grid">
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc18.title">Segítség távolról, kiszállás nélkül</h4>
+              <p class="desc" data-i18n="svc18.desc">Sok szoftveres hiba megoldható a te engedélyeddel, távolról — olcsóbb is neked.</p>
+              <p class="symptom" data-i18n-html="svc18.symptom"><b>Erről ismerheted fel:</b> egy kisebb beállítást kellene javítani, és nem szeretnél emiatt kiszállásra várni.</p>
+              <div class="svc-price" data-i18n="svc18.price">12–25 €</div>
+            </div>
+            <div class="svc" data-reveal>
+              <h4 data-i18n="svc19.title">Rendszeres karbantartás</h4>
+              <p class="desc" data-i18n="svc19.desc">Havi vagy negyedéves átnézés, mielőtt még probléma lenne belőle.</p>
+              <p class="symptom" data-i18n-html="svc19.symptom"><b>Erről ismerheted fel:</b> szeretnéd megelőzni a bajt, nem csak akkor hívni, ha már megtörtént.</p>
+              <div class="svc-price" data-i18n="svc19.price">10–15 €/hó</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="more-note" data-i18n="svc.more">Ha valami mást szeretnél, ami nincs a listában — csak írj vagy hívj, szinte biztos, hogy abban is tudok segíteni.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="arak" class="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="price.eyebrow">Árazás</span>
+          <h2 data-i18n="price.heading">Átlátható árak, meglepetés nélkül</h2>
+          <p data-i18n="price.sub">A pontos árat mindig előre megbeszéljük. Az alábbi táblázat a leggyakoribb tételeket foglalja össze.</p>
+        </div>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="price.th1">Tétel</th><th data-i18n="price.th2">Ár</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="price.r1">Óradíj (kiszállással)</td><td>10–15 €/óra</td></tr>
+            <tr><td data-i18n="price.r2">Gyors átvizsgálás (ha nem kérsz utána javítást)</td><td>8–12 €</td></tr>
+            <tr><td data-i18n="price.r3">Kiszállás Ipolyságon belül</td><td data-i18n="price.r3v">ingyenes</td></tr>
+            <tr><td data-i18n="price.r4">Kiszállás környékbeli falvakba</td><td data-i18n="price.r4v">0,20–0,30 €/km</td></tr>
+            <tr><td data-i18n="price.r5">Nagyobb csomag (pl. teljes felújítás)</td><td data-i18n="price.r5v">35–55 €-tól</td></tr>
+          </tbody>
+        </table>
+        <p class="price-note" data-i18n="price.note">Készpénzes fizetés, a munka elvégzése után, a helyszínen. Vidéki, helyi árazás — nem a fővárosi szervizek díjszabása.</p>
+      </div>
+    </section>
+
+    <!-- WHY + GUARANTEE -->
+    <section id="miert-en">
+      <div class="wrap why-grid">
+        <div>
+          <span class="eyebrow" data-i18n="why.eyebrow">Miért engem érdemes hívni</span>
+          <h2 class="why-title" data-i18n="why.heading">Nem sózok rád semmit, amire nincs szükséged</h2>
+          <ul class="why-list">
+            <li>
+              <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+              <span class="txt" data-i18n-html="why.item1"><b>Érthető magyarázat</b><span>Szakzsargon nélkül tudod meg, mi volt a baj — nem kell hozzá informatikusnak lenned.</span></span>
+            </li>
+            <li>
+              <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+              <span class="txt" data-i18n-html="why.item2"><b>Mérés, nem találgatás</b><span>Előbb megmérem a valós okot, csak utána javaslok megoldást.</span></span>
+            </li>
+            <li>
+              <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+              <span class="txt" data-i18n-html="why.item3"><b>Házhoz megyek, vagy távolról</b><span>Ami gyorsabb és olcsóbb neked, azt választjuk.</span></span>
+            </li>
+            <li>
+              <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+              <span class="txt" data-i18n-html="why.item4"><b>Helyi, vidéki árazás</b><span>Nem a fővárosi szervizek díjszabása — Ipolyságra és környékére szabva.</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="guarantee-card" data-reveal>
+          <div class="badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" stroke="#fff" stroke-width="2"/></svg>
+          </div>
+          <h3 data-i18n="guarantee.heading">14 nap garancia</h3>
+          <p data-i18n="guarantee.text">Minden elvégzett munkára garanciát vállalok. Ha ugyanaz a hiba visszatér, díjmentesen megjavítom.</p>
+          <div class="guarantee-stats">
+            <div><b>1–2 nap</b><span data-i18n="guarantee.stat1">kiszállási idő</span></div>
+            <div><b>14 nap</b><span data-i18n="guarantee.stat2">garancia</span></div>
+            <div><b>0 €</b><span data-i18n="guarantee.stat3">kiszállás helyben</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HOW I WORK -->
+    <section id="hogyan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="how.eyebrow">Hogyan dolgozom</span>
+          <h2 data-i18n="how.heading">Három lépés, meglepetés nélkül</h2>
+          <p data-i18n="how.sub">Előre megbeszélt ár, érthető magyarázat, és csak az, amire tényleg szükséged van.</p>
+        </div>
+        <div class="how-grid">
+          <div class="how-step" data-reveal>
+            <div class="n">1</div>
+            <h4 data-i18n="how.s1t">Írsz vagy hívsz</h4>
+            <p data-i18n="how.s1d">Elmondod, mit tapasztalsz — nem kell hozzá szakzsargon.</p>
+          </div>
+          <div class="how-step" data-reveal>
+            <div class="n">2</div>
+            <h4 data-i18n="how.s2t">Megmérem a bajt</h4>
+            <p data-i18n="how.s2d">Helyszínen vagy távolról: előbb a valódi ok, csak utána a megoldás.</p>
+          </div>
+          <div class="how-step" data-reveal>
+            <div class="n">3</div>
+            <h4 data-i18n="how.s3t">Javítás, előre egyeztetett áron</h4>
+            <p data-i18n="how.s3d">Ha egyetértesz, megcsinálom. 14 nap garancia minden munkára.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="velemenyek">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="t.eyebrow">Vélemények</span>
+          <h2 data-i18n="t.heading">Amit az ügyfelek mondanak</h2>
+        </div>
+        <div class="t-grid">
+          <div class="t-card" data-reveal>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="t.q1">„A wifi a hátsó szobában alig ment. Átrendezte a routert, megmérte — azóta stabil.”</blockquote>
+            <div class="who">Mária<span data-i18n="t.w1">Ipolyság</span></div>
+          </div>
+          <div class="t-card" data-reveal>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="t.q2">„A laptop percekig indult. Kiderült, tele volt a lemez — nem kellett új gép.”</blockquote>
+            <div class="who">Peter<span data-i18n="t.w2">Šahy</span></div>
+          </div>
+          <div class="t-card" data-reveal>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="t.q3">„Érthetően elmagyarázta, mit csinál. Az árat előre megbeszéltük — semmi meglepetés.”</blockquote>
+            <div class="who">Katalin<span data-i18n="t.w3">Tesmag</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="gyik">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="faq.eyebrow">Gyakori kérdések</span>
+          <h2 data-i18n="faq.heading">Amit még jó előre tudni</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              <span data-i18n="faq.q1">Mennyi idő alatt érsz ki hozzám?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div id="faq-a1" class="faq-a" role="region" aria-labelledby="faq-q1"><p data-i18n="faq.a1">Ipolyságon és a közeli falvakban jellemzően 1–2 napon belül, sürgős esetben akár még aznap.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              <span data-i18n="faq.q2">Mit kell előkészítenem, mielőtt jössz?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div id="faq-a2" class="faq-a" role="region" aria-labelledby="faq-q2"><p data-i18n="faq.a2">Csak annyit, hogy a gép bekapcsolható és elérhető legyen. Jelszót csak akkor kérek, ha az adott munkához muszáj.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              <span data-i18n="faq.q3">Hogyan tudok fizetni?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div id="faq-a3" class="faq-a" role="region" aria-labelledby="faq-q3"><p data-i18n="faq.a3">Készpénzzel, a munka elvégzése után, a helyszínen.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              <span data-i18n="faq.q4">Muszáj hozzám jönnöd, vagy megoldható távolról is?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div id="faq-a4" class="faq-a" role="region" aria-labelledby="faq-q4"><p data-i18n="faq.a4">Sok szoftveres probléma távolról is megoldható, kiszállás nélkül — ez olcsóbb is neked.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section id="foglalas" class="cta-band">
+      <div class="wrap">
+        <h2 data-i18n="cta.heading">Írj, és megmondom, mi lehet a baj</h2>
+        <p data-i18n="cta.sub">Nem kell hozzá szakzsargon — csak mondd el, mit tapasztalsz, és onnantól én intézem a többit.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+421911733581" data-contact="phone-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+            <span data-contact="phone-text">+421 911 733 581</span>
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/421911733581" target="_blank" rel="noopener noreferrer" data-i18n="cta.wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand" data-contact="name">Flok Zoltán</div>
+          <div class="foot-desc" data-i18n="footer.desc">Számítógépes és hálózati segítség házhoz — Ipolyság (Šahy) és környéke.</div>
+        </div>
+        <div class="foot-contact">
+          <a href="tel:+421911733581" data-contact="phone-link"><span data-contact="phone-text">+421 911 733 581</span></a>
+          <a href="mailto:it_szolg@icloud.com" data-contact="email-link"><span data-contact="email-text">it_szolg@icloud.com</span></a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span><span data-i18n="footer.copy">© 2026</span> <span data-contact="name">Flok Zoltán</span> · <span data-i18n="footer.area">Ipolyság (Šahy) és környéke</span></span>
+        <span data-i18n="footer.tags">Készpénzes fizetés · 14 nap garancia</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Model -> Controller -->
+  <script src="model.js" defer></script>
+  <script src="controller.js" defer></script>
+</body>
+</html>
