@@ -41,6 +41,24 @@ h1, h2, h3, .disp {
   letter-spacing: -0.01em;
 }
 
+.nav-cta,
+.btn,
+.tag,
+.eyebrow,
+th {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Megakadályozza a magasságbeli ugrást */
+  line-height: 1.2;
+  display: inline-block;
+}
+
+/* A gomboknak érdemes fix/minimum magasságot adni */
+.btn, .nav-cta {
+  min-height: 44px; /* A jobb kattinthatóság (Accessibility) miatt is kiváló */
+  box-sizing: border-box;
+}
+
 a { color: inherit; }
 img { max-width: 100%; display: block; }
 
