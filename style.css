@@ -629,9 +629,9 @@ footer { background: var(--navy-deep); color: rgba(250, 247, 242, 0.7); padding:
 /* Reveal & Focus */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .5s ease, transform .5s ease;
+  transform: translateY(12px);
   will-change: opacity, transform;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 [data-reveal].in {
