@@ -25,18 +25,18 @@ html {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: 'Newsreader', serif, 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Newsreader', serif, 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, nav, button, .btn {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
 
 h1, h2, h3, .disp {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
   color: var(--navy);
   letter-spacing: -0.01em;
 }
