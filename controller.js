@@ -1,5 +1,5 @@
 /**
- * APP CONTROLLER (Optimalizált & Javított)
+ * APP CONTROLLER (CLS & Reflow Optimised)
  */
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof AppModel !== 'undefined') {
@@ -12,7 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const AppController = {
   init() {
     const savedLang = AppModel.getSavedLang();
-    this.applyLanguage(savedLang);
+    // Csak akkor futtatjuk a DOM frissítést, ha a mentett nyelv eltér a jelenlegi HTML lang-tól
+    const currentDomLang = document.documentElement.getAttribute('lang') || 'hu';
+    
+    if (savedLang !== currentDomLang) {
+      this.applyLanguage(savedLang);
+    } else {
+      AppModel.setLang(savedLang);
+    }
+
     this.bindEvents();
     this.initScrollObserver();
   },
@@ -75,35 +83,38 @@ const AppController = {
 
     if (!dict || !contact) return;
 
-    // DOM Csatolások frissítése
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dict[key] !== undefined) el.textContent = dict[key];
-    });
+    // Használjunk requestAnimationFrame-et a kényszerített újraszámítás elkerülésére
+    requestAnimationFrame(() => {
+      // DOM Csatolások frissítése
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
 
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      if (dict[key] !== undefined) el.innerHTML = dict[key];
-    });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
 
-    // Kontakt adatok frissítése
-    const contactMap = {
-      'name': contact.name,
-      'phone-text': contact.phoneText,
-      'email-text': contact.emailText
-    };
+      // Kontakt adatok frissítése
+      const contactMap = {
+        'name': contact.name,
+        'phone-text': contact.phoneText,
+        'email-text': contact.emailText
+      };
 
-    Object.entries(contactMap).forEach(([key, val]) => {
-      document.querySelectorAll(`[data-contact="${key}"]`).forEach(el => el.textContent = val);
-    });
+      Object.entries(contactMap).forEach(([key, val]) => {
+        document.querySelectorAll(`[data-contact="${key}"]`).forEach(el => el.textContent = val);
+      });
 
-    document.querySelectorAll('[data-contact="phone-link"]').forEach(el => el.setAttribute('href', contact.phoneHref));
-    document.querySelectorAll('[data-contact="email-link"]').forEach(el => el.setAttribute('href', contact.emailHref));
+      document.querySelectorAll('[data-contact="phone-link"]').forEach(el => el.setAttribute('href', contact.phoneHref));
+      document.querySelectorAll('[data-contact="email-link"]').forEach(el => el.setAttribute('href', contact.emailHref));
 
-    // Gyökér elem és nyelvi gombok
-    document.documentElement.setAttribute('lang', lang);
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+      // Gyökér elem és nyelvi gombok
+      document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+      });
     });
   },
 
@@ -111,13 +122,15 @@ const AppController = {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in');
+          requestAnimationFrame(() => {
+            entry.target.classList.add('in');
+          });
           obs.unobserve(entry.target);
         }
       });
     }, { 
-      threshold: 0.01,
-      rootMargin: '0px 0px -50px 0px' 
+      threshold: 0.05,
+      rootMargin: '0px 0px -20px 0px' 
     });
 
     const targets = document.querySelectorAll('[data-reveal]');
