@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://flokzoltan.github.io/it-szolgaltatas/</loc>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://flokzoltan.github.io/it-szolgaltatas/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://flokzoltan.github.io/it-szolgaltatas/sk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flokzoltan.github.io/it-szolgaltatas/"/>
+  </url>
+  <url>
+    <loc>https://flokzoltan.github.io/it-szolgaltatas/sk/</loc>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://flokzoltan.github.io/it-szolgaltatas/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://flokzoltan.github.io/it-szolgaltatas/sk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flokzoltan.github.io/it-szolgaltatas/"/>
+  </url>
+</urlset>
