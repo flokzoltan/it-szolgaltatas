@@ -2,7 +2,6 @@
  * APP CONTROLLER
  * A nyelvi változatok külön, indexelhető URL-en élnek.
  * Ez a fájl csak a kliensoldali interakciókat kezeli.
- *
  */
 document.addEventListener('DOMContentLoaded', () => {
   initServiceToggles();
@@ -67,24 +66,13 @@ function openFaq(item, button) {
   const panel = item.querySelector('.faq-a');
   item.classList.add('open');
   button.setAttribute('aria-expanded', 'true');
-  if (!panel) return;
-
-  panel.setAttribute('aria-hidden', 'false');
-  panel.style.maxHeight = `${panel.scrollHeight}px`;
-  panel.addEventListener('transitionend', () => {
-    if (item.classList.contains('open')) panel.style.maxHeight = 'none';
-  }, { once: true });
+  if (panel) panel.setAttribute('aria-hidden', 'false');
 }
 
 function closeFaq(item) {
   const button = item.querySelector('.faq-q');
   const panel = item.querySelector('.faq-a');
   if (button) button.setAttribute('aria-expanded', 'false');
-  if (panel) {
-    panel.setAttribute('aria-hidden', 'true');
-    panel.style.maxHeight = `${panel.scrollHeight}px`;
-    void panel.offsetHeight;
-    panel.style.maxHeight = '0px';
-  }
+  if (panel) panel.setAttribute('aria-hidden', 'true');
   item.classList.remove('open');
 }
