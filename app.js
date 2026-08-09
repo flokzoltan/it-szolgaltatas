@@ -2,6 +2,7 @@
  * APP CONTROLLER
  * A nyelvi változatok külön, indexelhető URL-en élnek.
  * Ez a fájl csak a kliensoldali interakciókat kezeli.
+ *
  */
 document.addEventListener('DOMContentLoaded', () => {
   initServiceToggles();
