@@ -5,20 +5,20 @@ Ez az ág a szerviz-alkalmazás foglalási oldalára mutató linkeket tartalmazz
 interneten** – a GitHub Pages azonnal élesíti, és a látogatók törött lapra
 érkeznének.
 
-## 1. A cím beírása
+## 1. A cím már be van írva
 
-A linkek helyőrzőt tartalmaznak: `https://FOGLALAS-CIM-IDE`. Cseréld ki a
-valódi címre (a szervizhez tartozó tunnel- vagy domain-cím, HTTPS-sel):
+A linkek a `https://foglalas.itszolg.cc` címre mutatnak. Ez az aldomain a
+szerviz gépén futó foglalási oldalt szolgálja ki, Cloudflare Tunnelen át.
 
-```bash
-grep -rl 'FOGLALAS-CIM-IDE' . | xargs sed -i '' 's|https://FOGLALAS-CIM-IDE|https://a-te-cimed.sk|g'
-```
-
-Ellenőrzés – ennek üresen kell maradnia:
+**Előfeltétel az élesítéshez:** a tunnelnek működnie kell, vagyis a
+`https://foglalas.itszolg.cc/foglalas` böngészőből elérhető legyen. Ellenőrzés:
 
 ```bash
-grep -rn 'FOGLALAS-CIM-IDE' .
+curl -sI https://foglalas.itszolg.cc/foglalas | head -1
 ```
+
+Amíg ez nem ad `HTTP/2 200`-at, ne kerüljön a `main`-re: a látogatók
+törött lapra érkeznének.
 
 ## 2. Élesítés
 
