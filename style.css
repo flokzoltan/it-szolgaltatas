@@ -1453,3 +1453,63 @@ button,
   color: var(--rust-dark);
 }
 
+
+/* ==========================================================================
+   IDŐPONTFOGLALÁS – a fejléc gombja és a foglalási sáv
+
+   A hívás és a foglalás EGYÜTT áll, minden képernyőn. Eddig vagy-vagy volt:
+   asztali nézetben csak a gomb (`.nav-phone{display:none}`), telefonon pedig
+   csak az ikon (`.nav-cta{display:none}` 640px alatt). Aki telefonálni akar,
+   és aki nem, ugyanazt a fejlécet nézi – mindkét út legyen kéznél.
+
+   A telefon MÁSODLAGOS lett (körvonalas), a foglalás az elsődleges: két
+   azonos súlyú, telt gomb egymás mellett verseng, és egyik sem nyer.
+   ========================================================================== */
+.nav-phone {
+  display: inline-flex;
+  background: transparent;
+  color: var(--rust-btn);
+  border: 1px solid var(--line);
+}
+.nav-phone:hover {
+  background: var(--accent-soft);
+  color: var(--rust-dark);
+  border-color: var(--rust-btn);
+}
+.nav-cta svg { flex: none; opacity: .9; }
+.nav-cta .cta-short { display: none; }
+
+/*
+  A foglalási sávban a foglalás áll ELÖL, a hívás és a Messenger alatta.
+  A `min-width:100%` nem díszítés: a szöveg a `.cta-actions` flex-sorába
+  kerül, és e nélkül BEÁLLNA a gombok közé egy sorba. Puszta `flex-basis`
+  nem elég – a flex-elem alapból zsugorodhat, és be is állt a gombok mellé.
+*/
+.cta-band .cta-or {
+  flex: 0 0 100%;
+  min-width: 100%;
+  margin: 20px 0 4px;
+  font-size: 14px;
+  opacity: .92;
+}
+.cta-band .cta-actions { flex-wrap: wrap; }
+
+/* Az ár elolvasása után csúcsosodik a szándék – ott legyen mit megnyomni. */
+.pricing .price-book {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 15px;
+}
+.pricing .price-book a {
+  color: var(--rust-on-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  /* Telefonon a felirat rövidül, de a gomb NEM tűnik el. */
+  .nav-cta { display: inline-flex; padding-inline: 12px; gap: 6px; }
+  .nav-cta .cta-long { display: none; }
+  .nav-cta .cta-short { display: inline; }
+  .nav-actions { gap: 8px; }
+  .nav .brand span:not(.brand-mark) { display: none; }
+}
